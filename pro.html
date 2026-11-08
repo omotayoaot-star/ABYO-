@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+
+     <header>
+    <div class="logo">ABYO</div>
+
+ <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products on ABYO SHOP..."
+        autocomplete="off"
+    >
+
+    <div id="suggestions"></div>
+    </div>
+      <button onclick="searchProducts()">Search</button>
+
+     <div class="cart">
+        🛒 Cart: <span id="cartCount">0</span>
+    </div>
+
+     <div>
+        <a href="sign.html">
+        <button>sign in</button>  
+        </a>    
+    </div>
+</header>
+ 
+<nav>
+    <button onclick="filterProducts('All')">All</button>
+    <button onclick="filterProducts('MEN')">men</button>
+    <button onclick="filterProducts('women')">women</button>
+    <button onclick="filterProducts('Home')">Home</button>
+    <button onclick="filterProducts('Beauty')">Beauty</button>
+    <button onclick="filterProducts('Electronics')">Electronics</button>
+    <button onclick="filterProducts('jewelry')">JEWELRY</button>
+    <button onclick="filterProducts('Fashion')">Fashion</button>
+</nav>
+
+<section class="navbar">
+    <h1>Shop Smart. Live Better.</h1>
+    <p>Discover amazing products at affordable prices.</p>
+    <button class="shop-btn"
+    onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        Shop Now →
+    </button>
+</section>
+
+<h2>🔥 Hot Deals</h2>
+
+<section class="products" id="products">
+
+    <div class="card" data-category="Electronics">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+        alt="Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>₦15,000</p>
+        <button onclick="addToCart('Wireless Headphones', 15000)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card" data-category="Fashion">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+        alt="Sneakers">
+        <h3>Fashion Sneakers</h3>
+        <p>₦25,000</p>
+        <button onclick="addToCart('Fashion Sneakers', 25000)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card" data-category="Electronics">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"
+        alt="Watch">
+        <h3>Smart Watch</h3>
+        <p>₦20,000</p>
+        <button onclick="addToCart('Smart Watch', 20000)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card" data-category="Home">
+        <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=500"
+        alt="Home decor">
+        <h3>Home Decoration</h3>
+        <p>₦12,000</p>
+        <button onclick="addToCart('Home Decoration', 12000)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card" data-category="Beauty">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500"
+        alt="Beauty products">
+        <h3>Beauty Essentials</h3>
+        <p>₦8,000</p>
+        <button onclick="addToCart('Beauty Essentials', 8000)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card" data-category="Fashion">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500"
+        alt="T-shirt">
+        <h3>Classic T-Shirt</h3>
+        <p>₦7,000</p>
+        <button onclick="addToCart('Classic T-Shirt', 7000)">
+            Add to Cart
+        </button>
+    </div>
+     <div class="card" data-category="jewelry">
+            <img src="watch6.jpeg" alt="Watch">
+            <h3>watch</h3>
+            <p>₦20,000</p>
+            <button onclick="addToCart('jewelry,₦20,000')">
+                Add to chat
+            </button>
+        </div>
+
+          <div class="card" data-category="Fashion">
+        <img src="cloth1.webp"
+        alt="shirt">
+        <h3> Shirt</h3>
+        <p>₦7,000</p>
+        <button onclick="addToCart('Fashion', 7000)">
+            Add to Cart
+        </button>
+    </div>
+    <div class="card" data-category="Fashion">
+        <img src="shoe1.jpg"
+        alt="shoe">
+        <h3>shoe</h3>
+        <p>₦25,000</p>
+        <button onclick="addToCart('Fashion,₦25,000')">
+            Add to Cart
+        </button>
+        </div>
+        <div class="card" data-category="Fashion">
+            <img src="shoe5.jpg" alt="shoe">
+            <h3>shoe</h3>
+            <p>₦20,000</p>
+            <button onclick="addToCart('Fashion,₦20,000')">
+                Add to cart
+            </button>
+        </div>
+        
+        <div class="card" data-category="jewelry">
+            <img src="watch4.jpeg" alt="watch">
+            <h3>Smart watch</h3>
+            <p>₦75,000</p>
+            <button onclick="addToCart('jewelry,₦75,000')">
+                Add to chat
+            </button>
+        </div>
+        <div class="card" data-category="Beauty">
+            <img src="bag1.jpeg" alt="bag">
+            <h3>Woman bag</h3>
+            <p>₦10,000</p>
+            <button onclick="addToCart('Beauty,₦10,000')">
+                Add to chat
+            </button>
+        </div>
+         <div class="card" data-category="WOMEN">
+        <img src="bag2.jpeg"
+        alt="bag">
+        <h3>women bag</h3>
+        <p>₦8,000</p>
+        <button onclick="addToCart('women,₦8,000')">
+            Add to Cart
+        </button>
+    </div>
+     <div class="card" data-category="WOMEN">
+        <img src="shoe7.avif"
+        alt="shoe">
+        <h3>Women Shoe</h3>
+        <p>₦20,000</p>
+        <button onclick="addToCart('Women,₦10,000')">
+            Add to Cart
+        </button>
+    </div>
+     <div class="card" data-category="jewelry">
+        <img src="watch8.jpeg"
+        alt="jewelry">
+        <h3>Smart watch</h3>
+        <p>₦8,000</p>
+        <button onclick="addToCart('jewelry,₦35,000')">
+            Add to Cart
+        </button>
+    </div>
+
+     <div class="card" data-category="MEN">
+        <img src="cloth.webp"
+        alt="MEN">
+        <h3>T-shirt</h3>
+        <p>₦25,000</p>
+        <button onclick="addToCart('MEN,₦25,000')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card" data-category="women">
+        <img src="shoe.jpg"
+        alt="Women">
+        <h3>shoe</h3>
+        <p>₦25,000</p>
+        <button onclick="addToCart('women,₦25,000')">
+            Add to Cart
+        </button>
+        </div>
+
+        <div class="card" data-category="Fashion">
+        <img src="slepas2.jpeg"
+        alt="Fashion">
+        <h3>shoe</h3>
+        <p>₦15,000</p>
+        <button onclick="addToCart('Fashion,₦25,000')">
+            Add to Cart
+        </button>
+        </div>
+
+</section>
+
+<footer>
+    <h2>ABYO</h2>
+    <p>Your shopping, made simple.</p>
+    <p>© 2026 ABYO. All rights reserved.</p>
+</footer>
+
+<script src="pro.js">
+</script>
+
+    
+</body>
+</html>
